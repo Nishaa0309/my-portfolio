@@ -1,74 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nisha Acharya Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nisha Acharya | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#161b22;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+z-index:1000;
+}
+
+header h1{
+color:#58a6ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#58a6ff;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:100vh;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h2{
+font-size:50px;
+}
+
+.hero h3{
+color:#58a6ff;
+margin:20px 0;
+}
+
+.hero p{
+line-height:30px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+background:#238636;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-right:15px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.hero img{
+width:350px;
+border-radius:50%;
+border:5px solid #58a6ff;
+box-shadow:0 0 30px #58a6ff;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#58a6ff;
+}
+
+.about{
+text-align:center;
+font-size:18px;
+line-height:35px;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill span{
+font-size:20px;
+}
+
+.bar{
+background:#333;
+height:10px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:#58a6ff;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+border-radius:15px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin:15px 0;
+background:#161b22;
+border:none;
+color:white;
+border-radius:10px;
+}
+
+.contact button{
+padding:15px 40px;
+background:#238636;
+border:none;
+color:white;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#161b22;
+}
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero img{
+width:250px;
+margin-bottom:40px;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Nisha Acharya</h1>
-        <p>BCA Student | Java Developer | Web Developer</p>
-    </header>
+<header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a BCA student passionate about software development,
-            web development, and Android application development.
-        </p>
-    </section>
+<h1>Portfolio</h1>
 
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>BCA - Completed</li>
-            <li>PUC - Completed</li>
-            <li>SSLC - Completed</li>
-        </ul>
-    </section>
+<nav>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Android Development</li>
-            <li>MySQL</li>
-        </ul>
-    </section>
+<a href="#home">Home</a>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>Student Management System</li>
-            <li>Online Library Management System</li>
-            <li>Personal Portfolio Website</li>
-        </ul>
-    </section>
+<a href="#about">About</a>
 
-    <section>
-        <h2>Certificates</h2>
-        <ul>
-            <li>Java Programming Certificate</li>
-            <li>Web Development Certificate</li>
-        </ul>
-    </section>
+<a href="#skills">Skills</a>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: nishaacharya1357@gmail.com</p>
-        <p>Phone: +91 9483568589</p>
-        <p>GitHub: github.com/@Nishaa0309</p>
-        <p>LinkedIn: linkedin.com/in/Nisha Acharya</p>
-    </section>
+<a href="#projects">Projects</a>
 
-    <footer>
-        <p>© 2026 Nisha Acharya. All Rights Reserved.</p>
-    </footer>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h2>Hello, I'm</h2>
+
+<h2 style="color:#58a6ff;">Your Name</h2>
+
+<h3 id="typing"></h3>
+
+<p>
+
+I am a passionate BCA student interested in Web Development, Android Development, Artificial Intelligence and Software Development.
+
+</p>
+
+<a href="#" class="btn">Download Resume</a>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+<img src="https://via.placeholder.com/350" alt="Profile">
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p class="about">
+
+I am currently pursuing Bachelor of Computer Applications (BCA). I enjoy creating modern websites, Android applications, and learning new technologies. My goal is to become a Software Engineer in a top IT company.
+
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skill">
+
+<span>HTML</span>
+
+<div class="bar"><div class="progress" style="width:95%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<span>CSS</span>
+
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<span>JavaScript</span>
+
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<span>Java</span>
+
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<span>Android</span>
+
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>Personal Portfolio</h3>
+
+<p>A responsive personal portfolio website.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Student Management System</h3>
+
+<p>Java project for managing student records.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Weather App</h3>
+
+<p>Android application using weather API.</p>
+
+</div>
+
+<div class="card">
+
+<h3>AI Chatbot</h3>
+
+<p>Simple chatbot using JavaScript.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Nisha Acharya</h3>
+
+<p>Email: nishaacharya1357@mail.com</p>
+
+<p>Phone: +91 9483568589</p>
+
+<p>GitHub: github.com/@Nisha0309</p>
+
+<p>LinkedIn: linkedin.com/in/Nisha Acharya</p>
+
+</footer>
+
+<script>
+
+const text="Web Developer | Java Programmer | Android Developer";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,80);
+
+}
+
+}
+
+typing();
+
+</script>
 
 </body>
+
 </html>
